@@ -1,0 +1,99 @@
+/* Template.css */
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.resume-template {
+  /* width: 80%; */
+  margin: 20px auto;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.resume-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.resume-header p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.resume-section {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.resume-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.resume-item {
+  margin-bottom: 10px;
+}
+
+.right-align {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+  color: #555;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.project-name {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.project-skills {
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: 10px;
+  color: #555;
+}
+
+.resume-item p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.resume-item a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.resume-item a:hover {
+  text-decoration: underline;
+}

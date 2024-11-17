@@ -1,0 +1,29 @@
+.navigation-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.prev{
+    background-color: rgb(20, 103, 176);
+    color: rgb(255, 255, 255);
+    width: 6rem;
+    height: 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.next{
+    background-color: rgb(20, 176, 75);
+    color: rgb(255, 255, 255);
+    width: 6rem;
+    height: 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.save{
+    background-color: rgb(67, 20, 176);
+    color: rgb(255, 255, 255);
+    width: 7.5rem;
+    height: 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: auto;
+}

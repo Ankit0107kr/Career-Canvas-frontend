@@ -1,0 +1,43 @@
+/* Styles for Home component */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .left{
+    width: 48%;
+    height: max-content;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+
+  }
+  .right {
+    width: 48%;
+    height: max-content;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+ 
+  
+  .left {
+    padding-left: 20px;
+  }
+  
+  .pdfbtn {
+    background-color: rgb(67, 20, 176);
+    color: rgb(255, 255, 255);
+    width: 9rem;
+    height: 2rem;
+    border-radius: 9px;
+    cursor: pointer;
+    margin: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .gbutton:hover {
+    background-color: #2980b9;
+  }
+  
