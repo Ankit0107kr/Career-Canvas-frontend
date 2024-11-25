@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate  , Link} from "react-router-dom";
 import "../Styles/Login.css";
 
 const Login = () => {
@@ -19,28 +19,26 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError(null); // Clear any previous errors
+  const [loading, setLoading] = useState(false);
 
-    try {
-      const response = await axios.post("http://localhost:4000/user/login", {
-        email: formData.email,
-        password: formData.password,
-      });
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setError(null);
+  setLoading(true);
 
-      // Store user details in localStorage
-      localStorage.setItem("user", JSON.stringify(response.data));
+  try {
+    const response = await axios.post("http://localhost:4000/user/login", formData);
+    localStorage.setItem("user", JSON.stringify(response.data));
+    console.log("Login successful:", response.data);
+    navigate("/");
+  } catch (error) {
+    console.error("Login failed:", error);
+    setError(error.response?.data?.message || "Invalid email or password.");
+  } finally {
+    setLoading(false);
+  }
+};
 
-      console.log("Login successful:", response.data);
-
-      // Redirect to home page after successful login
-      navigate("/");
-    } catch (error) {
-      console.error("Login failed:", error);
-      setError("Invalid email or password."); // Show error message
-    }
-  };
 
   return (
     <div className="login-container">
@@ -69,7 +67,12 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" disabled={loading}>
+  {loading ? "Logging in..." : "Login"}
+</button>
+
+        <span>New User ?</span>
+        <Link to="/register"> Register </Link>
       </form>
     </div>
   );
