@@ -19,16 +19,18 @@ const Template = ({ name, role, email, phone, linkedin, github, experiences, edu
         {education &&
           education.map((edu, index) => (
             <div className="resume-item" key={index}>
-              <p>
-                <strong>Institution:</strong> {edu.institution || 'Harcourt Butler Technical University'}
-              </p>
+              <div className="item-header">
+                <p>
+                  <strong>Institution:</strong> {edu.institution || 'Harcourt Butler Technical University'}
+                </p>
+                <span className="right-align">{edu.graduationYear || '2025'}</span>
+              </div>
               <p>
                 <strong>Degree:</strong> {edu.degree || 'Bachelor of Technology'}
               </p>
               <p>
                 <strong>Percentage / CGPA:</strong> {edu.percentage || '7.7'}
               </p>
-              <span className="right-align">{edu.graduationYear || '2025'}</span>
             </div>
           ))}
       </section>
@@ -47,16 +49,18 @@ const Template = ({ name, role, email, phone, linkedin, github, experiences, edu
         {experiences &&
           experiences.map((exp, index) => (
             <div className="resume-item" key={index}>
-              <p>
-                <strong>Company Name:</strong> {exp.company || 'Company Name'}
-              </p>
+              <div className="item-header">
+                <p>
+                  <strong>Company Name:</strong> {exp.company || 'Company Name'}
+                </p>
+                <span className="right-align">{exp.duration || '2 months'}</span>
+              </div>
               <p>
                 <strong>Role:</strong> {exp.role || 'Role'}
               </p>
               <p>
                 <strong>Job Description:</strong> {exp.description || 'Job Description'}
               </p>
-              <span className="right-align">{exp.duration || '2 months'}</span>
             </div>
           ))}
       </section>
@@ -71,7 +75,7 @@ const Template = ({ name, role, email, phone, linkedin, github, experiences, edu
                 {prj.name || 'E-commerce App'} <span className="project-skills">{prj.skills || 'React.js,Node.js,Express.js,MongoDB'}</span>
               </h3>
               <p>
-                <strong>Description:</strong> {prj.description || 'lorem20ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo in ipsum commodo tincidunt. Integer vel'}
+                <strong>Description:</strong> {prj.description || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
               </p>
               {prj.link && (
                 <p>

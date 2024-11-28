@@ -150,7 +150,8 @@ const ResumeForm = ({ setFormData }) => {
   
       try {
         // Send data to server
-        await axios.post("http://localhost:4000/create-pdf", resumeData);
+        // await axios.post("http://localhost:4000/create-pdf", resumeData);
+        await axios.post("https://career-canvas-backend.onrender.com/create-pdf", resumeData);
         console.log("Data successfully sent to the server");
   
         // Optionally update the parent component's state with the form data

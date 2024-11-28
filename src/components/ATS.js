@@ -13,9 +13,10 @@ function ATS() {
   // Move fetchResumeData outside of useEffect to use in multiple places
   async function fetchResumeData() {
     try {
-      const response = await axios.get("http://localhost:4000/resume");
+      // const response = await axios.get("http://localhost:4000/resume");
+      const response = await axios.get("https://career-canvas-backend.onrender.com/resume");
       setResumeData(response.data);
-      console.log("Resume data fetched:", response.data);
+      // console.log("Resume data fetched:", response.data);
     } catch (error) {
       console.error("Error fetching resume data:", error);
     }

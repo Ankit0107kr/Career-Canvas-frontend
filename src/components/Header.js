@@ -49,7 +49,7 @@ export default function Header() {
                   <div key="user-section" className="flex items-center space-x-4">
 
                   <ul>
-                    <li onClick={handleLogout} className="logout text-white">
+                    <li onClick={handleLogout} className="logout text-white cursor-pointer">
                     Logout
                     </li>
                   </ul>
