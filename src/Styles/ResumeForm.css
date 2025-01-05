@@ -3,27 +3,25 @@
     justify-content: space-between;
 }
 .prev{
-    background-color: rgb(20, 103, 176);
+    background-color: rgb(7, 66, 117);
     color: rgb(255, 255, 255);
     width: 6rem;
-    height: 2rem;
+    /* height: 2rem;     */
     border-radius: 12px;
     cursor: pointer;
 }
 .next{
-    background-color: rgb(20, 176, 75);
+    background-color: rgb(6, 94, 37);
     color: rgb(255, 255, 255);
     width: 6rem;
-    height: 2rem;
+    /* height: 2rem; */
     border-radius: 12px;
     cursor: pointer;
 }
 .save{
-    background-color: rgb(67, 20, 176);
+    background-color: rgb(33, 33, 33);
     color: rgb(255, 255, 255);
-    width: 7.5rem;
-    height: 2rem;
-    border-radius: 12px;
+    width:fit-content;
+    border-radius: 8px;
     cursor: pointer;
-    margin: auto;
 }

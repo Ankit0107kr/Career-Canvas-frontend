@@ -30,8 +30,8 @@
     background-color: rgb(67, 20, 176);
     color: rgb(255, 255, 255);
     width: 9rem;
-    height: 2rem;
-    border-radius: 9px;
+    /* height: 2rem; */
+    border-radius: 7px;
     cursor: pointer;
     margin: auto;
     transition: background-color 0.3s;
